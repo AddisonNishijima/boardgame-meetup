@@ -12,10 +12,6 @@ export default Ember.Route.extend({
         }
       });
       session.save();
-    },
-    delete(session) {
-      session.destroyRecord();
-      this.transitionTo('index');
     }
   }
 });
