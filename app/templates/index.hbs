@@ -1,8 +1,17 @@
-{{#each model.sessions as |session|}}
-  {{session-tile session=session}}
-{{/each}}
+<div class=" col col-md-6">
+  {{session-welcome}}
+
+  {{#each model.sessions as |session|}}
+    {{session-tile session=session}}
+  {{/each}}
+</div>
+<div class="col col-md-6">
+  <div>
+    {{outlet}}
+  </div>
+</div>
+
+
+
 
 {{new-event newSession='newSession'}}
-<div>
-  {{outlet}}
-</div>

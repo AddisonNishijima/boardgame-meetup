@@ -1,7 +1,12 @@
-<div>
-  {{#link-to 'index.session' session.id}}
-    <div class="well">
-      <h5>{{session.title}} on {{moment-format session.date 'LL'}}</h5>
+<div class="tile outer-box">
+  <div class="purple-accent pull-left">
+    <div class="white-accent">
     </div>
-  {{/link-to}}
+  </div>
+  <div>
+    {{#link-to 'index.session' session.id}}
+      <h3>{{moment-format session.date 'LL'}}</h3>
+      <h4>{{session.title}}</h4>
+    {{/link-to}}
+  </div>
 </div>

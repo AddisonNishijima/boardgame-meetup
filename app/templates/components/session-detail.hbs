@@ -1,7 +1,47 @@
-<h1>{{session.title}}</h1>
-<h2>{{moment-format session.date 'LL'}}</h2>
-<p>
-  {{session.info}}
-</p>
-<button class="btn btn-danger" {{action 'delete' session}}>Delete event</button>
+<div class="outer-box">
+  <div class="banner">
+    <h1>{{session.title}}</h1>
+    <h2>{{moment-format session.date 'LL'}}</h2>
+  </div>
+  <img src="#" alt="This will some day be an image!">
+  <p>
+    {{session.info}}
+  </p>
+  <div class="banner">
+    <h2>Players Attending:</h2>
+  </div>
+  <div class="inner-box">
+    <p>
+      dummy dummy dummy
+    </p>
+  </div>
+  <div class="banner">
+    <h2>Games:</h2>
+  </div>
+  <div class="inner-box">
+    <div class="row">
+      <div class="col col-sm-6">
+        <h3>Being Brought:</h3>
+        <p>
+          dummy dummy dummy
+        </p>
+      </div>
+      <div class="col col-sm-6">
+        <h3>Requested:</h3>
+        <p>
+          dummy dummy dummy
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<button class="glyphicon glyphicon-remove" {{action 'delete' session}}></button>
 {{update-session session=session updateForm='updateForm'}}
