@@ -1,0 +1,5 @@
+<h1>{{player.username}}</h1>
+<h2>{{player.name}}</h2>
+{{#if isPlayer}}
+  <button class="btn btn-warning" {{action 'logoutPlayer'}}>Log Out</button>
+{{/if}}

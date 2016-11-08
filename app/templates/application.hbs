@@ -1,4 +1,18 @@
-{{login-display}}
+<nav class='navbar'>
+  <ul class='nav nav-pills nav-justified'>
+      {{#link-to 'index' tagName='li'}}
+        <a {{bind-attr href="view.href"}}>home</a>
+      {{/link-to}}
+      {{#link-to 'players'tagName='li'}}
+        <a {{bind-attr href="view.href"}}>players</a>
+      {{/link-to}}
+      {{#link-to 'games' tagName='li'}}
+        <a {{bind-attr href="view.href"}}>games</a>
+      {{/link-to}}
+    {{login-display tagName='li'}}
+  </ul>
+</nav>
+
 <h1>Boardgame Meetup App</h1>
 
 <div class="container">
