@@ -1,0 +1,19 @@
+{{#if updateFormShow}}
+  <form class='small-form' {{action 'updateForm' session on='submit'}}>
+    <div class="form-group">
+      <label for="date">Session date:</label>
+      {{input value=date type='date' class="form-control" placeholder=session.date}}
+    </div>
+    <div class="form-group">
+      <label for="title">Choose a title</label>
+      {{input value=title class="form-control" placeholder=session.title}}
+    </div>
+    <div class="form-group">
+      <label for="info">Additional info:</label>
+      {{input value=info class="form-control" placeholder=session.info}}
+    </div>
+    <button class="btn btn-success center-block">Add Session</button>
+  </form>
+{{else}}
+  <button {{action 'showForm'}} class="btn btn-info">Update event</button>
+{{/if}}
