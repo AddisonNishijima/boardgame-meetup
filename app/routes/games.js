@@ -16,8 +16,8 @@ export default Ember.Route.extend({
     },
     lostGame(game){
       var player = this.get('currentPlayer.curPlayer');
-      game.set('owner', player);
-      player.get('games_owned').addObject(game);
+      game.get('owners').removeObject(player);
+      player.get('games_owned').removeObject(game);
       game.save().then(function(){
         return player.save();
       });

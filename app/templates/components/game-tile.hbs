@@ -5,10 +5,12 @@
     {{/link-to}}
     {{#if currentPlayer.curPlayer}}
       {{#if ownsGame}}
-        You own this game!
+      <p>
+        <button {{action 'lostGame' game}} class="btn btn-danger">I Don't Own This</button>
+      </p>
       {{else}}
         <p>
-          <button {{action 'ownGame' game}} class="btn btn-default">I Own This</button>
+          <button {{action 'ownGame' game}} class="btn btn-primary">I Own This</button>
         </p>
       {{/if}}
     {{/if}}

@@ -18,6 +18,9 @@ export default Ember.Component.extend({
   actions: {
     ownGame(game){
       this.sendAction('ownGame', game);
+    },
+    lostGame(game){
+      this.sendAction('lostGame', game);
     }
   }
 });
