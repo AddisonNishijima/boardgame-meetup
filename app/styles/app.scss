@@ -1,0 +1,28 @@
+body {
+  background-color: #D5FFF3;
+}
+
+.jumbotron {
+  border-radius: 0;
+  text-align: center;
+  background-color: #2F4858;
+  color: #96032F;
+  font-family: 'Londrina Shadow';
+  border-top: 5px solid #96032F;
+  border-bottom: 5px solid #96032F;
+  padding: 1rem 0;
+  h1 {
+    font-size: 8rem;
+  }
+}
+
+.tile {
+  padding: 2rem;
+  border: 3px solid #101935;
+  border-radius: 2rem;
+  background-color: rgba(0,0,0,0.2);
+  margin-bottom: 2rem;
+  img {
+    width: 40%;
+  }
+}

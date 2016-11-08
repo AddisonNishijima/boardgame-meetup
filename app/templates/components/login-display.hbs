@@ -1,0 +1,7 @@
+{{#if currentPlayer.curPlayer}}
+    Hello, {{currentPlayer.curPlayer.username}}
+{{else}}
+  {{#link-to 'login'}}
+    Login/Register
+  {{/link-to}}
+{{/if}}
