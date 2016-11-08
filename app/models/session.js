@@ -1,9 +1,9 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  date: DS.store(),
-  title: DS.store(),
-  info: DS.store(),
+  date: DS.attr(),
+  title: DS.attr(),
+  info: DS.attr(),
   games_being_brought: DS.hasMany('game', {async: true}),
   games_requested: DS.hasMany('game', {async: true}),
   players_attending: DS.hasMany('player', {async: true}),
