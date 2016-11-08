@@ -1,0 +1,15 @@
+<form class='small-form' {{action 'submitSignup' on='submit'}}>
+  <div class="form-group">
+    <label for="name">Your name:</label>
+    {{input value=email type='email' required='required' class="form-control"}}
+  </div>
+  <div class="form-group">
+    <label for="username">Choose a Username</label>
+    {{input value=username required='required' class="form-control"}}
+  </div>
+  <div class="form-group">
+    <label for="password">Choose a password</label>
+    {{input value=password type='password' required='required' class="form-control"}}
+  </div>
+  <button class="btn btn-primary center-block">Signup</button>
+</form>
