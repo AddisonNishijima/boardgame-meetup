@@ -1,7 +1,24 @@
-<div>
-  {{#link-to 'index.session' session.id}}
-    <div class="well">
-      <h5>{{session.title}} on {{moment-format session.date 'LL'}}</h5>
+<div class="tile outer-box">
+  <div class="row">
+    <div class="col col-xs-1">
+      <div class="purple-accent pull-left">
+        <div class="white-accent">
+        </div>
+      </div>
     </div>
-  {{/link-to}}
+    <div class="col col-xs-10">
+      <div>
+        {{#link-to 'index.session' session.id}}
+          <h3>{{moment-format session.date 'LL'}}</h3>
+          <h4>{{session.title}}</h4>
+        {{/link-to}}
+      </div>
+    </div>
+    <div class="col col-xs-1">
+      <div class="buttons">
+        <button class="glyphicon glyphicon-remove" {{action 'delete1' session}}></button>
+        {{update-session session=session updateForm2='updateForm3'}}
+      </div>
+    </div>
+  </div>
 </div>

@@ -6,7 +6,7 @@ export default Ember.Component.extend({
     showForm() {
       this.set('updateFormShow', true);
     },
-    updateForm(session) {
+    updateForm1(session) {
       var params = {
         date: this.get('date'),
         title: this.get('title'),
@@ -16,7 +16,7 @@ export default Ember.Component.extend({
       this.set('title', "");
       this.set('info', "");
       this.set('updateFormShow', false);
-      this.sendAction('updateForm', params, session);
+      this.sendAction('updateForm2', params, session);
     }
   }
 });

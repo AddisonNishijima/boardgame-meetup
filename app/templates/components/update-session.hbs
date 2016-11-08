@@ -1,5 +1,5 @@
 {{#if updateFormShow}}
-  <form class='small-form' {{action 'updateForm' session on='submit'}}>
+  <form class='small-form' {{action 'updateForm1' session on='submit'}}>
     <div class="form-group">
       <label for="date">Session date:</label>
       {{input value=date type='date' class="form-control" placeholder=session.date}}
@@ -15,5 +15,5 @@
     <button class="btn btn-success center-block">Add Session</button>
   </form>
 {{else}}
-  <button {{action 'showForm'}} class="btn btn-info">Update event</button>
+  <button {{action 'showForm'}} class="glyphicon glyphicon-pencil"></button>
 {{/if}}
