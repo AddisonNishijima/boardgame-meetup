@@ -26,9 +26,9 @@ export default Ember.Route.extend({
     },
     submitLogin(params){
       var context = this;
-      this.store.query('player', {orderBy: 'username', equalTo: params.username}).then(function(curPlayer){
+      this.store.query('player', {orderBy: 'username', equalTo: params.username}).then(function(toLogin){
         var canLogin = false;
-        curPlayer.forEach(function(player){
+        toLogin.forEach(function(player){
           if(player.get('password')===params.password){
             canLogin = true;
             context.get('currentPlayer').login(player);

@@ -1,0 +1,9 @@
+{{#if currentUser.curUser}}
+  {{#link-to 'user.questions' currentUser.curUser.id}}
+    Hello, {{currentUser.curUser.username}}
+  {{/link-to}}
+{{else}}
+  {{#link-to 'login'}}
+    Login/Register
+  {{/link-to}}
+{{/if}}
