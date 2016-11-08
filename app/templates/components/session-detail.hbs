@@ -1,0 +1,6 @@
+<h1>{{session.title}}</h1>
+<h2>{{moment-format session.date 'LL'}}</h2>
+<p>
+  {{session.info}}
+</p>
+{{update-session session=session updateForm='updateForm'}}

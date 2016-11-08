@@ -1,7 +1,26 @@
 # Boardgame-meetup
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is an app for the Super Awesome Board Game Session Night Thing. You can use it to RSVP for board game nights, request games, add games that you will be bringing AND MORE.
+
+#### By **_Aimen Khakwani, Addison Nishijima, Ewa Manek, Zachary Matthewstearn_**
+
+## Features
+
+* player sign up and login
+* players can view a list of upcoming sessions and who is attending
+* players can view a list of the games being brought/requested for each session
+* players can register for a session and unregister
+* players can request games and add games they will bring
+* players can view a list of previous sessions and their attendance, game that were brought etc. Like that time that we killed Steven because he had a beard and it was suspicious.
+* players can see board game details via the boardgamegeek api
+* players will have some sort of profile thing that will include:
+  * games owned (with info from boardgamegeek)
+  * events they are planning to attend
+  * trash talky blurb or other blurb anyway a blurb
+* papayawhip easter egg
+* auto generate sessions?
+* incorporate a calendar somehow?
+* deploy to heroku
 
 ## Prerequisites
 
@@ -19,35 +38,27 @@ You will need the following things properly installed on your computer.
 * `cd boardgame-meetup`
 * `npm install`
 * `bower install`
+* if bootstrap is not working run 'ember install ember-bootstrap'
 
 ## Running / Development
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+## Technologies Used
 
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
+* JavaScript
+* Ember JS
+* bootstrap
+* Node.js and npm
+* Bower
+* SASS
 
 ### Deploying
 
 Specify what it takes to deploy your app.
 
-## Further Reading / Useful Links
 
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+## License
 
+Copyright (c) 2016 **_Aimen Khakwani, Addison Nishijima, Ewa Manek, Zachary Matthewstearn_**

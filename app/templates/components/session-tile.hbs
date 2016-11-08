@@ -1,5 +1,7 @@
 <div>
+  {{#link-to 'index.session' session.id}}
     <div class="well">
-      <h5>{{session.title}} on {{session.date}}</h5>
+      <h5>{{session.title}} on {{moment-format session.date 'LL'}}</h5>
     </div>
+  {{/link-to}}
 </div>
