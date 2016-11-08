@@ -1,7 +1,16 @@
 <div>
-  {{#link-to 'games.game' game.id}}
-    <div class="well">
-      <h5>{{game.name}}</h5>
-    </div>
-  {{/link-to}}
+  <div class="well">
+    {{#link-to 'games.game' game.id}}
+    <h3>{{game.name}}</h3>
+    {{/link-to}}
+    {{#if currentPlayer.curPlayer}}
+      {{#if ownsGame}}
+        You own this game!
+      {{else}}
+        <p>
+          <button {{action 'ownGame' game}} class="btn btn-default">I Own This</button>
+        </p>
+      {{/if}}
+    {{/if}}
+  </div>
 </div>
