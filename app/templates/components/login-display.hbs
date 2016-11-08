@@ -1,7 +1,5 @@
-{{#if currentUser.curUser}}
-  {{#link-to 'user.questions' currentUser.curUser.id}}
-    Hello, {{currentUser.curUser.username}}
-  {{/link-to}}
+{{#if currentPlayer.curPlayer}}
+    Hello, {{currentPlayer.curPlayer.username}}
 {{else}}
   {{#link-to 'login'}}
     Login/Register
