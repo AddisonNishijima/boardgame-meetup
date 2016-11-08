@@ -13,7 +13,7 @@ export default Ember.Route.extend({
     newSession(params){
       var session = this.store.createRecord('session', params);
       session.save();
-      this.transitionTo('index');
+      this.transitionTo('index.session', session.id);
     },
     delete3(session) {
       session.destroyRecord();

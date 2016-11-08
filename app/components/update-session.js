@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  updateFormShow: false,
+  isShowingModal: false,
   actions: {
-    showForm() {
-      this.set('updateFormShow', true);
+    toggleForm() {
+      this.toggleProperty('isShowingModal');
     },
     updateForm1(session) {
       var params = {
@@ -15,7 +15,7 @@ export default Ember.Component.extend({
       this.set('date', "");
       this.set('title', "");
       this.set('info', "");
-      this.set('updateFormShow', false);
+      this.set('isShowingModal', false);
       this.sendAction('updateForm2', params, session);
     }
   }
