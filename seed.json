@@ -1,0 +1,42 @@
+{
+  "sessions":
+  [
+    {
+      "date": "November 11, 2016",
+      "title": "JS Last Hoorah Boardgame Night",
+      "info": "Done with JavaScript? Party in Style...Boardgame Style! (Snacks not provided)"
+    },
+    {
+      "date": "November 11, 2016",
+      "title": "JS Last Hoorah Boardgame Night",
+      "info": "Done with JavaScript? Party in Style...Boardgame Style! (Snacks not provided)"
+    },
+    {
+      "date": "November 11, 2016",
+      "title": "JS Last Hoorah Boardgame Night",
+      "info": "Done with JavaScript? Party in Style...Boardgame Style! (Snacks not provided)"
+    }
+  ],
+  "players":
+  [
+    {
+      "name": "Zack",
+      "username": "Rafael-Bob",
+      "password": "Waksberg"
+    },
+    {
+      "name": "Aimen",
+      "username": "akok2354315433",
+      "password": "aimenEpicodus"
+    }
+  ],
+  "games":
+  [
+    {
+      "name": "Killer Bunnies"
+    },
+    {
+      "name": "Monolopy"
+    }
+  ]
+}

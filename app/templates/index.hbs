@@ -1,1 +1,3 @@
-<h1>Hello, {{currentPlayer.username}}</h1>
+{{#each model.sessions as |session|}}
+  {{session-tile session=session}}
+{{/each}}
