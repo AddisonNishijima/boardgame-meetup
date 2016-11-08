@@ -3,4 +3,5 @@
 <p>
   {{session.info}}
 </p>
+<button class="btn btn-danger" {{action 'delete' session}}>Delete event</button>
 {{update-session session=session updateForm='updateForm'}}

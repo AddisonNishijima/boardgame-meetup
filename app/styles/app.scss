@@ -2,6 +2,10 @@ body {
   background-color: #D5FFF3;
 }
 
+.nav-pills > li{
+  cursor: pointer;
+}
+
 .jumbotron {
   border-radius: 0;
   text-align: center;
