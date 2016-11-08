@@ -2,7 +2,11 @@ import Ember from 'ember';
 import moment from 'moment'
 
 export default Ember.Component.extend({
+  isShowingModal: false,
   actions: {
+    toggleForm() {
+      this.toggleProperty('isShowingModal');
+    },
     newSession(){
       var params = {
         date: moment(this.get('date')).valueOf(),
@@ -12,6 +16,7 @@ export default Ember.Component.extend({
       this.set('date', "");
       this.set('title', "");
       this.set('info', "");
+      this.set('isShowingModal', false);
       this.sendAction('newSession', params);
     }
   }

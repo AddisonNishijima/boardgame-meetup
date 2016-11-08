@@ -1,3 +1,6 @@
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
 $light-grey: #CCDBDC;
 $dark-grey: #263D42;
 $bold-blue: #80CED7;
@@ -56,6 +59,11 @@ h1, h2, h3, h4, h5, h6, p {
       background-color: white;
     }
   }
+}
+
+.wider {
+  width: 50%;
+  margin: 0 auto;
 }
 
 #welcome {
