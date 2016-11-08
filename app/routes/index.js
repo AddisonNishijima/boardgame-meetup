@@ -17,6 +17,14 @@ export default Ember.Route.extend({
     },
     delete3(session) {
       session.destroyRecord();
+    },
+    updateForm5(params, session) {
+      Object.keys(params).forEach(function(key){
+        if(params[key]){
+          session.set(key, params[key]);
+        }
+      });
+      session.save();
     }
   }
 });

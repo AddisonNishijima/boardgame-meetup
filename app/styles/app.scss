@@ -41,12 +41,13 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .tile {
   margin-left: 0;
-  padding-left: 5rem;
+  padding-left: 0;
+  padding-bottom: 0;
   .purple-accent {
     width: 3rem;
     background-color: #8C6B86;
     margin-top: -10px;
-    margin-left: -5rem;
+    // margin-left: -5rem;
     height: inherit;
     .white-accent {
       margin-top: 60px;

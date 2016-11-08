@@ -5,13 +5,13 @@ export default Ember.Route.extend({
     return this.store.findRecord('session', params.session_id);
   },
   actions: {
-    updateForm(params, session) {
-      Object.keys(params).forEach(function(key){
-        if(params[key]){
-          session.set(key, params[key]);
-        }
-      });
-      session.save();
-    }
+    // updateForm(params, session) {
+    //   Object.keys(params).forEach(function(key){
+    //     if(params[key]){
+    //       session.set(key, params[key]);
+    //     }
+    //   });
+    //   session.save();
+    // }
   }
 });
