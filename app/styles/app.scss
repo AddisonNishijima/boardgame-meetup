@@ -11,20 +11,34 @@ $muted-green: #84C1B4;
 
 body {
   background-color: $bold-blue;
+  font-family: 'Work Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
+
+
 .nav-pills > li{
   cursor: pointer;
 }
 
 .container, .row, .col {
-  padding: 0;
+  padding: 0 ;
   margin: 0;
 }
-
+.col-md-2 {
+  padding-right: 0;
+  padding-left: 0;
+  ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+.glyphicon {
+  margin-left: 2rem;
+}
 .outer-box {
   background-color: $light-grey;
   padding: 1rem;
@@ -48,6 +62,13 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 0;
   padding-left: 0;
   padding-bottom: 0;
+  .tile-text {
+    h4 {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    // overflow: clipped;
+  }
   .purple-accent {
     width: 3rem;
     background-color: #8C6B86;
@@ -66,6 +87,47 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
   margin-bottom: 1rem;
   position: relative;
+}
+.navbar {
+  border-radius: 0;
+  border: none;
+  background-color: $bold-green;
+  padding: 2rem 0;
+  h1 {
+    font-size: 4rem;
+    color: white;
+    font-family: 'Khula', sans-serif;
+    font-weight: 800;
+  }
+
+  #login-display-panel {
+    background-color: $bold-purple;
+    height: 84px;
+    margin: -2rem 0;
+    padding: 1rem;
+    a, a:link, a:visited, a:active, a:hover {
+      display: block;
+      margin-top: 2rem;
+      color: white;
+      font-size: 15px;
+      text-decoration: none;
+    }
+  }
+
+  ul li {
+    border-right: 1px solid white;
+    &:last-of-type {
+      border-right: none;
+    }
+    a, a:link, a:hover, a:visited, a:active {
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    a:hover {
+      background-color: $bold-blue;
+    }
+  }
 }
 
 #imagetext {
