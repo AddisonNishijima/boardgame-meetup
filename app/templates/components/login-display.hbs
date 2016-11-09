@@ -8,4 +8,14 @@
       Login/Register
     {{/link-to}}
   {{/if}}
+
+<div id="player-avatar" class="">
+  {{#unless currentPlayer.curPlayer}}
+    <img src="../../images/blankavatar.gif" alt="blank avatar">
+  {{else}}
+    <img src={{currentPlayer.curPlayer.avatar}} alt="player avatar">
+  {{/unless}}
+</div>
+
+
 </div>

@@ -6,6 +6,5 @@ export default DS.Model.extend({
   info: DS.attr(),
   games_being_brought: DS.hasMany('game', {async: true, inverse: 'sessions_bringing'}),
   games_requested: DS.hasMany('game', {async: true, inverse: 'sessions_requested'}),
-  players_attending: DS.hasMany('player', {async: true}),
-  image_url: DS.attr()
+  players_attending: DS.hasMany('player', {async: true})
 });
