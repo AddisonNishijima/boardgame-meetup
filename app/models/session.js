@@ -4,6 +4,7 @@ export default DS.Model.extend({
   date: DS.attr(),
   title: DS.attr(),
   info: DS.attr(),
+  image_url: DS.attr(),
   games_being_brought: DS.hasMany('game', {async: true}),
   games_requested: DS.hasMany('game', {async: true}),
   players_attending: DS.hasMany('player', {async: true}),
