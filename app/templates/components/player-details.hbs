@@ -1,5 +1,5 @@
 <h1>{{player.username}}</h1>
-<h2>{{player.name}}</h2>
+<h2>Name: {{player.name}}</h2>
 {{#if isPlayer}}
   <button class="btn btn-warning" {{action 'logoutPlayer'}}>Log Out</button>
   {{update-player player=player updatePlayer='updatePlayer'}}
@@ -9,7 +9,15 @@
 <h3>Games Owned</h3>
   <ul>
     {{#each player.games_owned as |game|}}
-      <li>{{game.name}}</li>
+      {{#link-to 'games.game' game.id game.api_id tagName='li'}}{{game.name}}{{/link-to}}
+    {{/each}}
+  </ul>
+{{/if}}
+{{#if player.sessions}}
+<h3>Sessions attending/attended</h3>
+  <ul>
+    {{#each player.sessions as |session|}}
+      {{#link-to 'index.session' session.id tagName='li'}}{{moment-format session.date 'LL'}}{{/link-to}}
     {{/each}}
   </ul>
 {{/if}}

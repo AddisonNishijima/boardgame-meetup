@@ -1,1 +1,29 @@
-<h3>{{game.name}}</h3>
+<h3>{{game.game.name}}</h3>
+<p>
+  {{#each jsonInfo.boardgames.boardgame as |boardgame|}}
+    <img src={{boardgame.image}} class='img-responsive'>
+    <p>
+      From age: {{#each boardgame.age as |age|}}
+        {{age}}
+      {{/each}}
+    </p>
+    <p>
+      Max players: {{#each boardgame.maxplayers as |maxplayers|}}
+        {{maxplayers}}
+      {{/each}}
+    </p>
+    <p>
+      Playing time: {{#each boardgame.playingtime as |playingtime|}}
+        {{playingtime}} minutes
+      {{/each}}
+    </p>
+    <p>
+      Year published: {{#each boardgame.yearpublished as |yearpublished|}}
+        {{yearpublished}}
+      {{/each}}
+    </p>
+    <div>
+      {{{boardgame.description}}}
+    </div>
+  {{/each}}
+</p>
