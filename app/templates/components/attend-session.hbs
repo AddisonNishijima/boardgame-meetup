@@ -1,1 +1,26 @@
-{{yield}}
+<button {{action 'toggleForm'}} class='btn btn-default'>I'm Going!</button>
+
+{{#if isShowingModal}}
+  {{#modal-dialog close='toggleForm'
+    targetAttachment="center"
+    translucentOverlay=true
+    container-class="wider"
+    }}
+    <form class='small-form' {{action 'newSession' on='submit'}}>
+      <div class="form-group">
+        <label for="date">I will bring:</label>
+        <select class="form-control" name="bring_game" onchange={{action "updateValue" value="target.value"}}>
+          <option value="" selected>Please choose one:</option>
+          {{#each currentPlayer.curPlayer.games_owned as |game|}}
+            <option value={{game.id}}>{{game.name}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="request">I'd like to request:</label>
+        {{input value=request class="form-control"}}
+      </div>
+      <button {{action 'attendSession' session}}class="btn btn-success center-block">RSVP</button>
+    </form>
+  {{/modal-dialog}}
+{{/if}}
