@@ -33,7 +33,9 @@
       <div class="col col-sm-6">
         <h3>Requested:</h3>
         <p>
-          dummy dummy dummy
+          {{#each session.games_requested as |game|}}
+            {{game.name }}
+          {{/each}}
         </p>
       </div>
     </div>
