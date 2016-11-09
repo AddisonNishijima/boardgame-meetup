@@ -8,11 +8,13 @@
     {{session.info}}
   </p>
   <div class="banner">
-    <h2>Players Attending:</h2>
+    <h2>Players Attending: {{#if currentPlayer.curPlayer}}{{attend-session session=session attendSession='attendSession'}}{{/if}}</h2>
   </div>
   <div class="inner-box">
     <p>
-      dummy dummy dummy
+      {{#each session.players_attending as |player|}}
+        {{player.username}}
+      {{/each}}
     </p>
   </div>
   <div class="banner">
@@ -23,7 +25,9 @@
       <div class="col col-sm-6">
         <h3>Being Brought:</h3>
         <p>
-          dummy dummy dummy
+          {{#each session.games_being_brought as |game|}}
+            {{game.name }}
+          {{/each}}
         </p>
       </div>
       <div class="col col-sm-6">
