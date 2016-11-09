@@ -8,6 +8,12 @@ export default Ember.Component.extend({
     },
     attendSession(params, session){
       this.sendAction('attendSession', params, session);
+    },
+    unattend(session){
+      this.sendAction('unattend', session);
+    },
+    notBringing(game, session) {
+      this.sendAction('notBringing', game, session);
     }
     // delete(session) {
     //   if(confirm('Are you sure you want to delete this session?')) {
