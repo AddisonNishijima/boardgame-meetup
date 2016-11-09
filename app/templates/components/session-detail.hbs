@@ -3,10 +3,13 @@
     <h1>{{moment-format session.date 'LL'}}</h1>
     <h2>{{session.title}}</h2>
   </div>
-  <img class="session-image" src={{session.image_url}} alt="image for this session">
-  <div id="imagetext">
-    <p>{{session.info}}</p>
+  <div id="picture-container">
+    <img class="session-image" src="../../images/cards.jpg">
+    <div id="imagetext">
+      <p>{{session.info}}</p>
+    </div>
   </div>
+
   <div class="banner">
     <h2>Players Attending: {{#if currentPlayer.curPlayer}}{{attend-session session=session attendSession='attendSession' unattend='unattend'}}{{/if}}</h2>
   </div>

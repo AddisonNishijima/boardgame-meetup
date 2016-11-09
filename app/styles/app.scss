@@ -145,6 +145,14 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
+
+// #picture-container {
+//   background-image: url('../../images/cards.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
 #imagetext {
   position:absolute;
   padding: 2rem;
@@ -152,6 +160,7 @@ h1, h2, h3, h4, h5, h6, p {
   top: 150px;
   left: 60px;
   width: 70%;
+  height: 25%;
   color: white;
   background-color: rgba(144,176,177,0.6);
   font-family: 'Nixie One', cursive;
