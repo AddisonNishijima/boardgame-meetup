@@ -43,11 +43,6 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: $light-grey;
   padding: 1rem;
   margin: 2rem;
-  .banner {
-    background-color: $muted-green;
-    padding: 1rem;
-    font-family: 'Nixie One', cursive;
-  }
   .inner-box {
     background-color: $muted-blue;
     color: #4A4A4A;
@@ -55,9 +50,19 @@ h1, h2, h3, h4, h5, h6, p {
     &:last-of-type {
       margin-bottom: 0;
     }
+    &.game-tile , &.player-tile {
+      margin-top: 1rem;
+    }
     padding: 2rem;
   }
 }
+
+.banner {
+  background-color: $muted-green;
+  padding: 1rem;
+  font-family: 'Nixie One', cursive;
+}
+
 .tile {
   margin-left: 0;
   padding-left: 0;
@@ -67,13 +72,11 @@ h1, h2, h3, h4, h5, h6, p {
       overflow: hidden;
       white-space: nowrap;
     }
-    // overflow: clipped;
   }
   .purple-accent {
     width: 3rem;
     background-color: #8C6B86;
     margin-top: -10px;
-    // margin-left: -5rem;
     height: inherit;
     .white-accent {
       margin-top: 60px;
@@ -145,14 +148,6 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-
-// #picture-container {
-//   background-image: url('../../images/cards.jpg');
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
-
 #imagetext {
   position:absolute;
   padding: 2rem;
@@ -172,9 +167,9 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0 auto;
 }
 
-.button-add-session {
+.button-custom {
   color: $dark-grey;
-  background-color: $muted-blue;
+  background-color: $muted-green;
   display: block;
   margin: 0 auto;
   padding: 1rem;

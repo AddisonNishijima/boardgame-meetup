@@ -1,18 +1,16 @@
-<div>
-  <div class="well">
-    {{#link-to 'games.game' game.id game.api_id}}
+<div class="inner-box game-tile">
+  {{#link-to 'games.game' game.id game.api_id}}
     <h3>{{game.name}}</h3>
-    {{/link-to}}
-    {{#if currentPlayer.curPlayer}}
-      {{#if ownsGame}}
+  {{/link-to}}
+  {{#if currentPlayer.curPlayer}}
+    {{#if ownsGame}}
+    <p>
+      <button {{action 'lostGame' game}} class="button-custom">Mark as no longer owned</button>
+    </p>
+    {{else}}
       <p>
-        <button {{action 'lostGame' game}} class="btn btn-danger">Mark as no longer owned</button>
+        <button {{action 'ownGame' game}} class="button-custom">Mark as owned</button>
       </p>
-      {{else}}
-        <p>
-          <button {{action 'ownGame' game}} class="btn btn-primary">Mark as owned</button>
-        </p>
-      {{/if}}
     {{/if}}
-  </div>
+  {{/if}}
 </div>
