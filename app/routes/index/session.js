@@ -10,6 +10,14 @@ export default Ember.Route.extend({
       var player = this.get('currentPlayer.curPlayer');
       player.get('sessions').removeObject(session);
       session.get('players_attending').removeObject(player);
+      player.save();
+      session.save();
+    },
+    notBringing(game, session) {
+      session.get('games_being_brought').removeObject(game);
+      game.get('sessions_bringing').removeObject(session);
+      game.save();
+      session.save();
     },
     attendSession(params, session){
       var player = this.get('currentPlayer.curPlayer');
