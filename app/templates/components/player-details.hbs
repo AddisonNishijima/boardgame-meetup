@@ -5,3 +5,11 @@
   {{update-player player=player updatePlayer='updatePlayer'}}
   <button class="btn btn-danger" {{action 'deletePlayer' player}}>Delete Profile</button>
 {{/if}}
+{{#if player.games_owned}}
+<h3>Games Owned</h3>
+  <ul>
+    {{#each player.games_owned as |game|}}
+      <li>{{game.name}}</li>
+    {{/each}}
+  </ul>
+{{/if}}

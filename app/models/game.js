@@ -2,5 +2,5 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   name: DS.attr(),
-  owner: DS.belongsTo('player', {async: true})
+  owners: DS.hasMany('player', {async: true})
 });
