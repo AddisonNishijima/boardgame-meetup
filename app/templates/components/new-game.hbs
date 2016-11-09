@@ -1,0 +1,22 @@
+<button {{action 'toggleForm'}} class="button-add-session">Add New Game</button>
+
+{{#if isShowingModal}}
+  {{#modal-dialog close='toggleForm'
+    targetAttachment="center"
+    translucentOverlay=true
+    container-class="wider"
+    }}
+    <form class='small-form' {{action 'newGame' on='submit'}}>
+      <div class="form-group">
+        <label for="name">Game Name:</label>
+        {{input value=name required='required' class="form-control"}}
+      </div>
+      {{#if currentPlayer.curPlayer}}
+        <div class="form-group">
+          {{input type="checkbox" checked=isOwned class="form-control"}} <label for="title">Do you own this game?</label>
+        </div>
+      {{/if}}
+      <button class="btn btn-success center-block">Add Game</button>
+    </form>
+  {{/modal-dialog}}
+{{/if}}
