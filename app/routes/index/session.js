@@ -6,21 +6,26 @@ export default Ember.Route.extend({
     return this.store.findRecord('session', params.session_id);
   },
   actions: {
+    unattend(session){
+      var player = this.get('currentPlayer.curPlayer');
+      player.get('sessions').removeObject(session);
+      session.get('players_attending').removeObject(player);
+    },
     attendSession(params, session){
       var player = this.get('currentPlayer.curPlayer');
       var store = this.store;
-      // player.get('sessions').addObject(session);
-      // session.get('players_attending').addObject(player);
-      // player.save();
-      // session.save();
-      // if(params.game_to_bring){
-      //   this.store.findRecord('game', params.game_to_bring).then(function(game){
-      //     session.get('games_being_brought').addObject(game);
-      //     game.get('sessions_bringing').addObject(session);
-      //     game.save();
-      //     session.save();
-      //   });
-      // }
+      player.get('sessions').addObject(session);
+      session.get('players_attending').addObject(player);
+      player.save();
+      session.save();
+      if(params.game_to_bring){
+        this.store.findRecord('game', params.game_to_bring).then(function(game){
+          session.get('games_being_brought').addObject(game);
+          game.get('sessions_bringing').addObject(session);
+          game.save();
+          session.save();
+        });
+      }
       if(params.game_request){
         this.store.query('game', {
           orderBy: 'name',
