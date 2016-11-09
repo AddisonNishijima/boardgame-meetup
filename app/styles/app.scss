@@ -31,6 +31,8 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 2rem;
   .banner {
     background-color: $muted-green;
+    padding: 1rem;
+    font-family: 'Nixie One', cursive;
   }
   .inner-box {
     background-color: $muted-blue;
@@ -70,16 +72,30 @@ h1, h2, h3, h4, h5, h6, p {
   position:absolute;
   padding: 2rem;
   font-size: 1.6rem;
-  top: 130px;
+  top: 150px;
   left: 60px;
   width: 70%;
-  color:  white;
+  color: white;
   background-color: rgba(144,176,177,0.6);
+  font-family: 'Nixie One', cursive;
+  line-height: 2.5rem;
 }
 
 .wider {
   width: 50%;
   margin: 0 auto;
+}
+
+.button-add-session {
+  color: $dark-grey;
+  background-color: $muted-blue;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 3px solid $light-grey;
+  &:hover {
+    border: 3px solid $bold-purple;
+  }
 }
 
 #welcome {

@@ -4,6 +4,7 @@
   {{#each model.sessions as |session|}}
     {{session-tile session=session delete2='delete3' updateForm4="updateForm5"}}
   {{/each}}
+  {{new-event newSession='newSession'}}
 </div>
 <div class="col col-md-6">
   <div>
@@ -14,4 +15,4 @@
 
 
 
-{{new-event newSession='newSession'}}
+{{!-- {{new-event newSession='newSession'}} --}}
