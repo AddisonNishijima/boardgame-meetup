@@ -57,6 +57,22 @@ h1, h2, h3, h4, h5, h6, p {
     }
   }
 }
+.session-image {
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+#imagetext {
+  position:absolute;
+  padding: 2rem;
+  font-size: 1.6rem;
+  top: 130px;
+  left: 60px;
+  width: 70%;
+  color:  white;
+  background-color: rgba(144,176,177,0.6);
+}
 
 #welcome {
   box-sizing: content-box;

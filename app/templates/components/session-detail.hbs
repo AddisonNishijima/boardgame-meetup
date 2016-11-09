@@ -3,10 +3,10 @@
     <h1>{{session.title}}</h1>
     <h2>{{moment-format session.date 'LL'}}</h2>
   </div>
-  <img src="#" alt="This will some day be an image!">
-  <p>
-    {{session.info}}
-  </p>
+  <img class="session-image" src={{session.image_url}} alt="image for this session">
+  <div id="imagetext">
+    <p>{{session.info}}</p>
+  </div>
   <div class="banner">
     <h2>Players Attending:</h2>
   </div>
