@@ -13,3 +13,11 @@
     {{/each}}
   </ul>
 {{/if}}
+{{#if player.sessions}}
+<h3>Sessions attending/attended</h3>
+  <ul>
+    {{#each player.sessions as |sessions|}}
+      <li>{{moment-format sessions.date 'LL'}}</li>
+    {{/each}}
+  </ul>
+{{/if}}
