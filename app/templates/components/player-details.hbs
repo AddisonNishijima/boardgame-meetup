@@ -1,23 +1,27 @@
-<h1>{{player.username}}</h1>
-<h2>Name: {{player.name}}</h2>
-{{#if isPlayer}}
-  <button class="btn btn-warning" {{action 'logoutPlayer'}}>Log Out</button>
-  {{update-player player=player updatePlayer='updatePlayer'}}
-  <button class="btn btn-danger" {{action 'deletePlayer' player}}>Delete Profile</button>
-{{/if}}
-{{#if player.games_owned}}
-<h3>Games Owned</h3>
-  <ul>
-    {{#each player.games_owned as |game|}}
-      {{#link-to 'games.game' game.id game.api_id tagName='li'}}{{game.name}}{{/link-to}}
-    {{/each}}
-  </ul>
-{{/if}}
-{{#if player.sessions}}
-<h3>Sessions attending/attended</h3>
-  <ul>
-    {{#each player.sessions as |session|}}
-      {{#link-to 'index.session' session.id tagName='li'}}{{moment-format session.date 'LL'}}{{/link-to}}
-    {{/each}}
-  </ul>
-{{/if}}
+<div class="outer-box">
+  <div class="inner-box">
+    <h1>{{player.username}}</h1>
+    <h2>{{player.name}}</h2>
+    {{#if isPlayer}}
+      <button class="btn btn-warning" {{action 'logoutPlayer'}}>Log Out</button>
+      {{update-player player=player updatePlayer='updatePlayer'}}
+      <button class="btn btn-danger" {{action 'deletePlayer' player}}>Delete Profile</button>
+    {{/if}}
+    {{#if player.games_owned}}
+    <h3>Games Owned</h3>
+      <ul>
+        {{#each player.games_owned as |game|}}
+          <li>{{game.name}}</li>
+        {{/each}}
+      </ul>
+    {{/if}}
+    {{#if player.sessions}}
+    <h3>Sessions attending/attended</h3>
+      <ul>
+        {{#each player.sessions as |session|}}
+          {{#link-to 'index.session' session.id tagName='li'}}{{moment-format session.date 'LL'}}{{/link-to}}
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+</div>

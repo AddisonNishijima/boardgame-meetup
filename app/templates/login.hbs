@@ -1,4 +1,14 @@
-<h3>New to Super Awesome Board Game Session Night Thing?? Sign up here!</h3>
-{{signup-form users=model submitSignup='submitSignup'}}
-<h3>Already a Super Awesome Board Game Session Night Thing Member? Log in here!</h3>
-{{login-form submitLogin='submitLogin'}}
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="outer-box">
+      <div class="inner-box">
+        <h3>New to Board Game Night? Sign up here!</h3>
+        {{signup-form users=model submitSignup='submitSignup'}}
+      </div>
+      <div class="inner-box">
+        <h3>Already a Board Game Night Member? Log in here!</h3>
+        {{login-form submitLogin='submitLogin'}}
+      </div>
+    </div>
+  </div>
+</div>
