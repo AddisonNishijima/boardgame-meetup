@@ -5,4 +5,5 @@ export default DS.Model.extend({
   username: DS.attr(),
   password: DS.attr(),
   games_owned: DS.hasMany('game', {async: true}),
+  sessions: DS.hasMany('session', {async: true})
 });
