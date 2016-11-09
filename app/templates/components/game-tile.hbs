@@ -1,18 +1,16 @@
-<div>
-  <div class="well">
-    {{#link-to 'games.game' game.id}}
-    <h3>{{game.name}}</h3>
-    {{/link-to}}
-    {{#if currentPlayer.curPlayer}}
-      {{#if ownsGame}}
+<div class="inner-box game-tile">
+  {{#link-to 'games.game' game.id}}
+  <h3>{{game.name}}</h3>
+  {{/link-to}}
+  {{#if currentPlayer.curPlayer}}
+    {{#if ownsGame}}
+    <p>
+      <button {{action 'lostGame' game}} class="button-custom">I Don't Own This</button>
+    </p>
+    {{else}}
       <p>
-        <button {{action 'lostGame' game}} class="btn btn-danger">I Don't Own This</button>
+        <button {{action 'ownGame' game}} class="button-custom">I Own This</button>
       </p>
-      {{else}}
-        <p>
-          <button {{action 'ownGame' game}} class="btn btn-primary">I Own This</button>
-        </p>
-      {{/if}}
     {{/if}}
-  </div>
+  {{/if}}
 </div>
