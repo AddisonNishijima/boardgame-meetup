@@ -1,16 +1,29 @@
 <nav class='navbar'>
-  <ul class='nav nav-pills nav-justified'>
-      {{#link-to 'index' tagName='li'}}
-        <a {{bind-attr href="view.href"}}>home</a>
-      {{/link-to}}
-      {{#link-to 'players'tagName='li'}}
-        <a {{bind-attr href="view.href"}}>players</a>
-      {{/link-to}}
-      {{#link-to 'games' tagName='li'}}
-        <a {{bind-attr href="view.href"}}>games</a>
-      {{/link-to}}
-    {{login-display tagName='li'}}
-  </ul>
+  <div class="row">
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Epic Board Game Night</h1>
+        </div>
+        <div class="col-md-5">
+          <ul class='nav nav-justified'>
+            {{#link-to 'index' tagName='li'}}
+              <a {{bind-attr href="view.href"}}>Sessions</a>
+            {{/link-to}}
+            {{#link-to 'players'tagName='li'}}
+              <a {{bind-attr href="view.href"}}>Players</a>
+            {{/link-to}}
+            {{#link-to 'games' tagName='li'}}
+              <a {{bind-attr href="view.href"}}>Games</a>
+            {{/link-to}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      {{login-display}}
+    </div>
+  </div>
 </nav>
 
 <div class="container">

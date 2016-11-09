@@ -1,9 +1,11 @@
-{{#if currentPlayer.curPlayer}}
-  {{#link-to 'players.player' currentPlayer.curPlayer.id }}
-    Hello, {{currentPlayer.curPlayer.username}}
-  {{/link-to}}
-{{else}}
-  {{#link-to 'login'}}
-    Login/Register
-  {{/link-to}}
-{{/if}}
+<div id="login-display-panel">
+  {{#if currentPlayer.curPlayer}}
+    {{#link-to 'players.player' currentPlayer.curPlayer.id }}
+      Hello, {{currentPlayer.curPlayer.username}}
+    {{/link-to}}
+  {{else}}
+    {{#link-to 'login'}}
+      Login/Register
+    {{/link-to}}
+  {{/if}}
+</div>
