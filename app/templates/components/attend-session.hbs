@@ -1,4 +1,9 @@
+{{#if isAttending}}
+<button {{action 'unattend' session}} class='btn btn-default'>I'm Not Going!</button>
+{{else}}
 <button {{action 'toggleForm'}} class='btn btn-default'>I'm Going!</button>
+{{/if}}
+
 
 {{#if isShowingModal}}
   {{#modal-dialog close='toggleForm'

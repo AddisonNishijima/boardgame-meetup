@@ -8,7 +8,7 @@
     <p>{{session.info}}</p>
   </div>
   <div class="banner">
-    <h2>Players Attending: {{#if currentPlayer.curPlayer}}{{attend-session session=session attendSession='attendSession'}}{{/if}}</h2>
+    <h2>Players Attending: {{#if currentPlayer.curPlayer}}{{attend-session session=session attendSession='attendSession' unattend='unattend'}}{{/if}}</h2>
   </div>
   <div class="inner-box">
     <p>
@@ -26,14 +26,19 @@
         <h3>Being Brought:</h3>
         <p>
           {{#each session.games_being_brought as |game|}}
-            {{game.name }}
+            <h5>
+              {{game.name }}
+              <button class="glyphicon glyphicon-remove" {{action 'notBringing' game session}}></button>
+            </h5>
           {{/each}}
         </p>
       </div>
       <div class="col col-sm-6">
         <h3>Requested:</h3>
         <p>
-          dummy dummy dummy
+          {{#each session.games_requested as |game|}}
+            <h5>{{game.name }}</h5>
+          {{/each}}
         </p>
       </div>
     </div>

@@ -6,6 +6,19 @@ export default Ember.Route.extend({
     return this.store.findRecord('session', params.session_id);
   },
   actions: {
+    unattend(session){
+      var player = this.get('currentPlayer.curPlayer');
+      player.get('sessions').removeObject(session);
+      session.get('players_attending').removeObject(player);
+      player.save();
+      session.save();
+    },
+    notBringing(game, session) {
+      session.get('games_being_brought').removeObject(game);
+      game.get('sessions_bringing').removeObject(session);
+      game.save();
+      session.save();
+    },
     attendSession(params, session){
       var player = this.get('currentPlayer.curPlayer');
       var store = this.store;
@@ -21,29 +34,32 @@ export default Ember.Route.extend({
           session.save();
         });
       }
-      // if(params.game_request){
-      //   this.store.query('game', {
-      //     orderBy: 'name',
-      //     equalTo: params.game_request
-      //   }).then(function(foundGames){
-      //     if(foundGames){
-      //       foundGames.forEach(function(game){
-      //         session.get('games_requested').addObject(game);
-      //         game.get('sessions_requested').addObject(session);
-      //         game.save();
-      //       });
-      //       session.save();
-      //     } else {
-      //       var newGame = store.createRecord('game', { name: params.game_request});
-      //       newGame.save().then(function(){
-      //         session.get('games_requested').addObject(game);
-      //         newGame.get('sessions_requested').addObject(session);
-      //         session.save();
-      //         newGame.save();
-      //       });
-      //     }
-      //   });
-      // }
+      if(params.game_request){
+        this.store.query('game', {
+          orderBy: 'name',
+          equalTo: params.game_request
+        }).then(function(foundGames){
+          var found = false;
+          foundGames.forEach(function(game){
+            if(game.get('name')=== params.game_request){
+              found = true;
+              session.get('games_requested').addObject(game);
+              game.get('sessions_requested').addObject(session);
+              game.save();
+              session.save();
+            }
+          });
+          if(!found){
+            var newGame = store.createRecord('game', { name: params.game_request});
+            newGame.save().then(function(){
+              session.get('games_requested').addObject(newGame);
+              newGame.get('sessions_requested').addObject(session);
+              session.save();
+              newGame.save();
+            });
+          }
+        });
+      }
     }
   }
 });
