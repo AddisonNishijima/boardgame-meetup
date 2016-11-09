@@ -32,16 +32,23 @@ export default Ember.Route.extend({
       }
       var url = "http://www.boardgamegeek.com/xmlapi/search?search=" + newGame.get('name');
       Ember.$.get(url).then(function(response) {
-        console.log(response);
+
         var stuff = new XMLSerializer().serializeToString(response.documentElement);
         xml2js.parseString(stuff, function(err, result){
-          var api_id = result.boardgames.boardgame[0].$.objectid;
-          console.log(api_id);
+          var api_id;
+          for(var i = 0; i < result.boardgames.boardgame.length; i++){
+            if(result.boardgames.boardgame[i].name[0]._ === params.name){
+              console.log("matchy matchy!");
+              api_id = result.boardgames.boardgame[i].$.objectid;
+            }
+          }
+          if(!api_id){
+            api_id = result.boardgames.boardgame[0].$.objectid;
+          }
           newGame.set('api_id', api_id);
           newGame.save();
         });
       });
-      //newGame.save();
     }
   }
 });
