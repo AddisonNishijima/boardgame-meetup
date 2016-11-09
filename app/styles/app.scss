@@ -105,12 +105,27 @@ h1, h2, h3, h4, h5, h6, p {
     height: 84px;
     margin: -2rem 0;
     padding: 1rem;
+    position: relative;
     a, a:link, a:visited, a:active, a:hover {
       display: block;
       margin-top: 2rem;
+      margin-left: 1rem;
       color: white;
       font-size: 15px;
       text-decoration: none;
+    }
+    #player-avatar {
+      position: absolute;
+      top: 12px;
+      left: 150px;
+      display:inline-block;
+      border-radius: 50%;
+      width: 60px;
+      background-color: $light-grey;
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
     }
   }
 
@@ -130,6 +145,14 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
+
+// #picture-container {
+//   background-image: url('../../images/cards.jpg');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
 #imagetext {
   position:absolute;
   padding: 2rem;
@@ -137,6 +160,7 @@ h1, h2, h3, h4, h5, h6, p {
   top: 150px;
   left: 60px;
   width: 70%;
+  height: 25%;
   color: white;
   background-color: rgba(144,176,177,0.6);
   font-family: 'Nixie One', cursive;
@@ -165,7 +189,6 @@ h1, h2, h3, h4, h5, h6, p {
   width: 140px;
   padding: 1rem 2rem;
 }
-
 button {
   padding: 0;
   font-size: 20px;
