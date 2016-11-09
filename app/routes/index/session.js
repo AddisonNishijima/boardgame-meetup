@@ -51,11 +51,27 @@ export default Ember.Route.extend({
           });
           if(!found){
             var newGame = store.createRecord('game', { name: params.game_request});
-            newGame.save().then(function(){
-              session.get('games_requested').addObject(newGame);
-              newGame.get('sessions_requested').addObject(session);
-              session.save();
-              newGame.save();
+            var url = "http://www.boardgamegeek.com/xmlapi/search?search=" + newGame.get('name');
+            Ember.$.get(url).then(function(response) {
+              var stuff = new XMLSerializer().serializeToString(response.documentElement);
+              xml2js.parseString(stuff, function(err, result){
+                var api_id;
+                for(var i = 0; i < result.boardgames.boardgame.length; i++){
+                  if(result.boardgames.boardgame[i].name[0]._ === params.name){
+                    api_id = result.boardgames.boardgame[i].$.objectid;
+                  }
+                }
+                if(!api_id){
+                  api_id = result.boardgames.boardgame[0].$.objectid;
+                }
+                newGame.set('api_id', api_id);
+                newGame.save().then(function(){
+                  session.get('games_requested').addObject(newGame);
+                  newGame.get('sessions_requested').addObject(session);
+                  session.save();
+                  newGame.save();
+                });
+              });
             });
           }
         });

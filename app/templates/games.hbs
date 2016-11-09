@@ -4,17 +4,13 @@
       <div class="banner">
         <h2>Games:</h2>
       </div>
-
       {{#each model as |game|}}
         {{game-tile game=game ownGame='ownGame' lostGame='lostGame'}}
       {{/each}}
-
-
     </div>
-
     <div>
       {{outlet}}
     </div>
-
+    {{new-game newGame='newGame'}}
   </div>
 </div>

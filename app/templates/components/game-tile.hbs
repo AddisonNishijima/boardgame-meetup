@@ -1,15 +1,15 @@
 <div class="inner-box game-tile">
-  {{#link-to 'games.game' game.id}}
+  {{#link-to 'games.game' game.id game.api_id}}
   <h3>{{game.name}}</h3>
   {{/link-to}}
   {{#if currentPlayer.curPlayer}}
     {{#if ownsGame}}
     <p>
-      <button {{action 'lostGame' game}} class="button-custom">I Don't Own This</button>
+      <button {{action 'lostGame' game}} class="button-custom">Mark as no longer owned</button>
     </p>
     {{else}}
       <p>
-        <button {{action 'ownGame' game}} class="button-custom">I Own This</button>
+        <button {{action 'ownGame' game}} class="button-custom">Mark as owned</button>
       </p>
     {{/if}}
   {{/if}}

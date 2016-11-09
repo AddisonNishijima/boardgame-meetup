@@ -15,5 +15,13 @@
         {{/each}}
       </ul>
     {{/if}}
+    {{#if player.sessions}}
+    <h3>Sessions attending/attended</h3>
+      <ul>
+        {{#each player.sessions as |session|}}
+          {{#link-to 'index.session' session.id tagName='li'}}{{moment-format session.date 'LL'}}{{/link-to}}
+        {{/each}}
+      </ul>
+    {{/if}}
   </div>
 </div>
