@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import xml2js from 'npm:xml2js';
 
 export default Ember.Route.extend({
   currentPlayer: Ember.inject.service(),
