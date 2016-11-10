@@ -1,8 +1,10 @@
-# Boardgame-meetup
+# Boardgame Meetup App
 
 This is an app for the Super Awesome Board Game Session Night Thing. You can use it to RSVP for board game nights, request games, add games that you will be bringing AND MORE.
 
 #### By **_Aimen Khakwani, Addison Nishijima, Ewa Manek, Zachary Matthewstearn_**
+####  
+<img src="public/images/screenshot.png" alt="A screenshot of the app">
 
 ## Features
 
