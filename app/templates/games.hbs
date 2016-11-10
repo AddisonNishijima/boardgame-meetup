@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6">
     <div class="outer-box">
       <div class="banner">
         <h2>Games:</h2>
@@ -8,9 +8,9 @@
         {{game-tile game=game ownGame='ownGame' lostGame='lostGame'}}
       {{/each}}
     </div>
-    <div>
-      {{outlet}}
-    </div>
     {{new-game newGame='newGame'}}
+  </div>
+  <div class="col-md-6">
+    {{outlet}}
   </div>
 </div>

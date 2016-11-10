@@ -4,12 +4,14 @@
   {{/link-to}}
   {{#if currentPlayer.curPlayer}}
     {{#if ownsGame}}
-    <p>
-      <button {{action 'lostGame' game}} class="button-custom">Mark as no longer owned</button>
+    <p {{action 'lostGame' game}}>
+      <span class="glyphicon glyphicon-minus"></span>
+      Mark as no longer owned
     </p>
     {{else}}
-      <p>
-        <button {{action 'ownGame' game}} class="button-custom">Mark as owned</button>
+      <p {{action 'ownGame' game}}>
+        <span class="glyphicon glyphicon-plus"></span>
+        Mark as owned
       </p>
     {{/if}}
   {{/if}}
