@@ -76,6 +76,13 @@ h1, h2, h3, h4, h5, h6, p {
       overflow: hidden;
       white-space: nowrap;
     }
+    a, a:link, a:hover, a:active, a:visited {
+      color: $dark-grey;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $bold-purple;
+    }
   }
   .purple-accent {
     width: 3rem;
