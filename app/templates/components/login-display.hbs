@@ -13,7 +13,11 @@
   {{#unless currentPlayer.curPlayer}}
     <img src="../../../images/blankavatar.gif" alt="blank avatar">
   {{else}}
-    <img src={{currentPlayer.curPlayer.avatar}} alt="player avatar">
+    {{#if currentPlayer.curPlayer.avatar}}
+      <img src={{currentPlayer.curPlayer.avatar}} alt="player avatar">
+    {{else}}
+      <img src="../../images/blankavatar.gif" alt="blank avatar">
+    {{/if}}
   {{/unless}}
 </div>
 

@@ -9,7 +9,8 @@ export default Ember.Component.extend({
     updatePlayer(player) {
       var params = {
         name: this.get('name'),
-        password: this.get('password')
+        password: this.get('password'),
+        avatar: this.get('avatar')
       };
       this.set('name', "");
       this.set('password', "");
