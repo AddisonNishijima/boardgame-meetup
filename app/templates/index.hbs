@@ -1,7 +1,7 @@
 <div class=" col col-md-6">
   {{session-welcome}}
 
-  {{#each model.sessions as |session|}}
+  {{#each model as |session|}}
     {{session-tile session=session delete2='delete3' updateForm4="updateForm5"}}
   {{/each}}
 
