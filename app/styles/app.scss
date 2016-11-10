@@ -192,6 +192,23 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
+.button-attend {
+  color: white;
+  background-color: $bold-green;
+  display: block;
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  border: 3px solid $bold-blue;
+  &:hover {
+    border: 3px solid $bold-purple;
+  }
+  &.button-inline {
+    width: 200px;
+    text-align: center;
+  }
+}
+
+
 #welcome {
   box-sizing: content-box;
   width: 140px;

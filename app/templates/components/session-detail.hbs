@@ -10,8 +10,15 @@
     </div>
   </div>
 
+
+  {{#if currentPlayer.curPlayer}}
+    {{attend-session session=session attendSession='attendSession' unattend='unattend'}}
+  {{/if}}
+
+
   <div class="banner">
-    <h2>Players Attending: {{#if currentPlayer.curPlayer}}{{attend-session session=session attendSession='attendSession' unattend='unattend'}}{{/if}}</h2>
+
+    <h2>Players Attending: </h2>
   </div>
   <div class="inner-box">
     <p>
