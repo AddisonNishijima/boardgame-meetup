@@ -1,27 +1,40 @@
 <div class="outer-box">
+  <div class="banner">
+    <h2>{{player.username}}</h2>
+  </div>
   <div class="inner-box">
-    <h1>{{player.username}}</h1>
-    <h2>{{player.name}}</h2>
+    <div class="player-avatar-big">
+      {{#unless player.avatar}}
+        <img src="../../../images/blankavatar.gif" alt="blank avatar">
+      {{else}}
+        <img src={{player.avatar}} alt="player avatar">
+      {{/unless}}
+    </div>
+    <h2 class="center">{{player.name}}</h2>
+    <br>
     {{#if isPlayer}}
-      <button class="btn btn-warning" {{action 'logoutPlayer'}}>Log Out</button>
+      <button class="button-custom button-inline" {{action 'logoutPlayer'}}>Log Out</button>
       {{update-player player=player updatePlayer='updatePlayer'}}
-      <button class="btn btn-danger" {{action 'deletePlayer' player}}>Delete Profile</button>
+      <button class="button-custom button-inline" {{action 'deletePlayer' player}}>Delete Profile</button>
     {{/if}}
-    {{#if player.games_owned}}
-    <h3>Games Owned</h3>
-      <ul>
-        {{#each player.games_owned as |game|}}
-          <li>{{game.name}}</li>
-        {{/each}}
-      </ul>
-    {{/if}}
-    {{#if player.sessions}}
-    <h3>Sessions attending/attended</h3>
-      <ul>
-        {{#each player.sessions as |session|}}
-          {{#link-to 'index.session' session.id tagName='li'}}{{moment-format session.date 'LL'}}{{/link-to}}
-        {{/each}}
-      </ul>
-    {{/if}}
+    <div class="player-info">
+      {{#if player.games_owned}}
+
+        <h3>Games Owned</h3>
+        <ul>
+          {{#each player.games_owned as |game|}}
+            <li>{{game.name}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+      {{#if player.sessions}}
+        <h3>Sessions attending/attended</h3>
+        <ul>
+          {{#each player.sessions as |session|}}
+            {{#link-to 'index.session' session.id tagName='li'}}{{moment-format session.date 'LL'}}{{/link-to}}
+          {{/each}}
+        </ul>
+      {{/if}}
+    </div>
   </div>
 </div>

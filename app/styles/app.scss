@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0 ;
   margin: 0;
 }
+.container {
+  margin: 0 auto;
+}
+
 .col-md-2 {
   padding-right: 0;
   padding-left: 0;
@@ -120,20 +124,22 @@ h1, h2, h3, h4, h5, h6, p {
       font-size: 15px;
       text-decoration: none;
     }
-    #player-avatar {
-      position: absolute;
-      top: 12px;
-      left: 150px;
-      display:inline-block;
+  }
+
+  .player-avatar {
+    position: absolute;
+    top: 12px;
+    left: 150px;
+    display:inline-block;
+    border-radius: 50%;
+    width: 60px;
+    background-color: $light-grey;
+    img {
+      width: 100%;
       border-radius: 50%;
-      width: 60px;
-      background-color: $light-grey;
-      img {
-        width: 100%;
-        border-radius: 50%;
-      }
     }
   }
+
 
   ul li {
     border-right: 1px solid white;
@@ -174,11 +180,15 @@ h1, h2, h3, h4, h5, h6, p {
   color: $dark-grey;
   background-color: $muted-green;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   padding: 1rem;
   border: 3px solid $light-grey;
   &:hover {
     border: 3px solid $bold-purple;
+  }
+  &.button-inline {
+    width: 200px;
+    text-align: center;
   }
 }
 
@@ -192,4 +202,22 @@ button {
   font-size: 20px;
   background-color: $light-grey;
   border: none;
+}
+
+.img-gamebox {
+  margin-bottom: 2rem;
+}
+
+.player-avatar-big {
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  width: 50%;
+  background-color: $light-grey;
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+.center {
+  text-align: center;
 }

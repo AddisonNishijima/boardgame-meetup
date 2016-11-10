@@ -1,9 +1,11 @@
 <div class="outer-box">
-  <div class="inner-box">
+  <div class="banner">
     <h3>{{game.game.name}}</h3>
+  </div>
+  <div class="inner-box">
     <p>
       {{#each jsonInfo.boardgames.boardgame as |boardgame|}}
-        <img src={{boardgame.image}} class='img-responsive'>
+        <img src={{boardgame.image}} class='img-responsive img-gamebox'>
         <p>
           From age: {{#each boardgame.age as |age|}}
             {{age}}
