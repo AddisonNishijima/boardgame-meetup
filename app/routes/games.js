@@ -7,9 +7,11 @@ export default Ember.Route.extend({
     return this.store.findAll('game');
   },
   redirect(model, transition) {
-    var game = model.get('firstObject');
-    var stringurl = '/games/game/'+game.id + "/" + game.get('api_id');
-    this.transitionTo(stringurl);
+    if(transition.targetName !== 'games.game'){
+      var game = model.get('firstObject');
+      var stringurl = '/games/game/'+game.id + "/" + game.get('api_id');
+      this.transitionTo(stringurl);
+    }
   },
   actions: {
     ownGame(game){

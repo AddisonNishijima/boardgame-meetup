@@ -6,7 +6,9 @@ export default Ember.Route.extend({
     return this.store.findAll('session')
   },
   redirect(model, transition) {
-    this.transitionTo('index.session', model.get('firstObject'));
+    if(transition.targetName !== 'index.session'){
+      this.transitionTo('index.session', model.get('firstObject'));
+    }
   },
   actions: {
     newSession(params){

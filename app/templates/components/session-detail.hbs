@@ -36,9 +36,9 @@
         <h3>Being Brought:</h3>
         <p>
           {{#each session.games_being_brought as |game|}}
-            <h5>
-              {{#link-to 'games.game' game.id game.api_id}}{{game.name }}{{/link-to}}
-              <button class="glyphicon glyphicon-remove" {{action 'notBringing' game session}}></button>
+            <h5 class="game-links">
+              <span class="glyphicon glyphicon-remove muted-blue" {{action 'notBringing' game session}}></span>
+              {{#link-to 'games.game' game.id game.api_id}}{{game.name}}{{/link-to}}
             </h5>
           {{/each}}
         </p>
@@ -47,7 +47,7 @@
         <h3>Requested:</h3>
         <p>
           {{#each session.games_requested as |game|}}
-            <h5>{{#link-to 'games.game' game.id game.api_id}}{{game.name }}{{/link-to}}</h5>
+            <h5 class="game-links">{{#link-to 'games.game' game.id game.api_id}}{{game.name }}{{/link-to}}</h5>
           {{/each}}
         </p>
       </div>
