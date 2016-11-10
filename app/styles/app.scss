@@ -71,19 +71,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 0;
   padding-left: 0;
   padding-bottom: 0;
-  .tile-text {
-    h4 {
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    a, a:link, a:hover, a:active, a:visited {
-      color: $dark-grey;
-      text-decoration: none;
-    }
-    a:hover {
-      color: $bold-purple;
-    }
-  }
   .purple-accent {
     width: 3rem;
     background-color: #8C6B86;
@@ -95,6 +82,22 @@ h1, h2, h3, h4, h5, h6, p {
       height: 5px;
       background-color: white;
     }
+  }
+}
+.tile-text {
+  h4 {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  a, a:link, a:hover, a:active, a:visited {
+    color: $dark-grey;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $bold-purple;
+  }
+  span {
+    margin: 7px;
   }
 }
 .session-image {
@@ -253,8 +256,13 @@ button {
   margin-right: 1rem;
 }
 .game-links {
+  line-height: 30px;
   margin-top: 0.5rem;
   &:first-of-type {
     margin-top: 1rem;
   }
+}
+
+.attendance {
+  font-size: large;
 }

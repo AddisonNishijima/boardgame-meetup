@@ -21,9 +21,9 @@
     <h2>Players Attending: </h2>
   </div>
   <div class="inner-box">
-    <p>
+    <p class="tile-text attendance">
       {{#each session.players_attending as |player|}}
-        {{#link-to 'players.player' player.id}}{{player.username}}{{/link-to}}
+        <span>{{#link-to 'players.player' player.id}}{{player.username}}{{/link-to}}</span>
       {{/each}}
     </p>
   </div>
@@ -36,7 +36,7 @@
         <h3>Being Brought:</h3>
         <p>
           {{#each session.games_being_brought as |game|}}
-            <h5 class="game-links">
+            <h5 class="game-links tile-text">
               <span class="glyphicon glyphicon-remove muted-blue" {{action 'notBringing' game session}}></span>
               {{#link-to 'games.game' game.id game.api_id}}{{game.name}}{{/link-to}}
             </h5>
@@ -45,9 +45,12 @@
       </div>
       <div class="col col-sm-6">
         <h3>Requested:</h3>
-        <p>
+        <p class='tile-text'>
           {{#each session.games_requested as |game|}}
-            <h5 class="game-links">{{#link-to 'games.game' game.id game.api_id}}{{game.name }}{{/link-to}}</h5>
+            <h5 class="game-links">
+              <span class="muted-blue"> </span>
+              {{#link-to 'games.game' game.id game.api_id}}{{game.name }}{{/link-to}}
+            </h5>
           {{/each}}
         </p>
       </div>
