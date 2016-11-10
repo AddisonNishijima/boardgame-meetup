@@ -7,19 +7,16 @@ This is an app for the Super Awesome Board Game Session Night Thing. You can use
 ## Features
 
 * player sign up and login
-* players can view a list of upcoming sessions and who is attending
+* players can view a list of upcoming and previous sessions and who is attending or who attended
 * players can view a list of the games being brought/requested for each session
 * players can register for a session and unregister
 * players can request games and add games they will bring
-* players can view a list of previous sessions and their attendance, game that were brought etc. Like that time that we killed Steven because he had a beard and it was suspicious.
 * players can see board game details via the boardgamegeek api
-* players will have some sort of profile thing that will include:
+* players can access their profiles which will include:
   * games owned (with info from boardgamegeek)
   * events they are planning to attend
-  * trash talky blurb or other blurb anyway a blurb
-* papayawhip easter egg
-* auto generate sessions?
-* incorporate a calendar somehow?
+  * the ability to update their info
+* players can access other players' profiles
 * deploy to heroku
 
 ## Prerequisites
@@ -49,7 +46,7 @@ You will need the following things properly installed on your computer.
 
 * JavaScript
 * Ember JS
-* bootstrap
+* Bootstrap
 * Node.js and npm
 * Bower
 * SASS

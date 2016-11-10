@@ -6,6 +6,11 @@ export default Ember.Route.extend({
   model() {
     return this.store.findAll('game');
   },
+  redirect(model, transition) {
+    var game = model.get('firstObject');
+    var stringurl = '/games/game/'+game.id + "/" + game.get('api_id');
+    this.transitionTo(stringurl);
+  },
   actions: {
     ownGame(game){
       var player = this.get('currentPlayer.curPlayer');

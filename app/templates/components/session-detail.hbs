@@ -16,7 +16,7 @@
   <div class="inner-box">
     <p>
       {{#each session.players_attending as |player|}}
-        {{player.username}}
+        {{#link-to 'players.player' player.id}}{{player.username}}{{/link-to}}
       {{/each}}
     </p>
   </div>
@@ -30,7 +30,7 @@
         <p>
           {{#each session.games_being_brought as |game|}}
             <h5>
-              {{game.name }}
+              {{#link-to 'games.game' game.id game.api_id}}{{game.name }}{{/link-to}}
               <button class="glyphicon glyphicon-remove" {{action 'notBringing' game session}}></button>
             </h5>
           {{/each}}
@@ -40,7 +40,7 @@
         <h3>Requested:</h3>
         <p>
           {{#each session.games_requested as |game|}}
-            <h5>{{game.name }}</h5>
+            <h5>{{#link-to 'games.game' game.id game.api_id}}{{game.name }}{{/link-to}}</h5>
           {{/each}}
         </p>
       </div>
