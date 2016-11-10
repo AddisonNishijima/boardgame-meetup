@@ -8,8 +8,8 @@
       <label for="password">Change password:</label>
       {{input value=password class="form-control" type='password'}}
     </div>
-    <button class="btn btn-success center-block">Save Updates</button>
+    <button class="button-custom button-inline">Save Updates</button>
   </form>
 {{else}}
-  <button {{action 'showForm'}} class="btn btn-info">Update Profile</button>
+  <button {{action 'showForm'}} class="button-custom button-inline">Update Profile</button>
 {{/if}}
