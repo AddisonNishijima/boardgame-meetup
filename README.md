@@ -19,7 +19,6 @@ This is an app for the Super Awesome Board Game Session Night Thing. You can use
   * events they are planning to attend
   * the ability to update their info
 * players can access other players' profiles
-* deploy to heroku
 
 ## Prerequisites
 
